@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Assignment1 of Computaional Photography">
+<meta name="author" content="Weichen Wang, Chimian Wu">
+<title>Pinhole Camera By SQUIRREL@Dartmouth</title>
+
+<!-- Bootstrap core CSS -->
+<link href="assets/css/bootstrap.css" rel="stylesheet">
+
+<!-- Custom CSS -->
+<link href="assets/css/main.css" rel="stylesheet">
+<link href="assets/css/font-awesome.min.css" rel="stylesheet">
+<link href="assets/css/animate-custom.css" rel="stylesheet">
+<link href="assets/css/my-icon.css" rel="stylesheet">
+<link href="assets/css/my-fonts.css" rel="stylesheet">
+<script src="assets/js/jquery.min.js"></script>
+<script type="text/javascript" src="assets/js/modernizr.custom.js"></script>
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body data-spy="scroll" data-offset="0" data-target="#navbar-main">
+<div id="navbar-main"> 
+  <!-- Fixed navbar -->
+  <div class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+        <a class="navbar-brand" href="#home"><i class="icon icon-camera"></i><span class="brand-text"> PiCMR </span>　</a> 
+      </div>
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#home" class="smoothScroll">Home</a></li>
+          <li> <a href="#about" class="smoothScroll"> About</a></li>
+          <li> <a href="#services" class="smoothScroll"> Camera</a></li>
+          <li> <a href="#portfolio" class="smoothScroll"> Showcase</a></li>
+          <li> <a href="#team" class="smoothScroll"> Team</a></li>
+        </ul>
+      </div>
+      <!--/.nav-collapse --> 
+    </div>
+  </div>
+</div>
+
+<!-- ==== HEADERWRAP ==== -->
+<div id="headerwrap" name="home">
+  <header class="clearfix">
+    <h1>Adjustable, Exquisite, Interesting.</h1>
+    <p>Thanks to Prof. Jarosz and his well-designed course<br>
+      so that we can explore such a fun in this cute handiwork.</p>
+    <a href="#portfolio" class="smoothScroll btn btn-lg">See Our Works</a> </header>
+</div>
+<!-- /headerwrap --> 
+
+
+<!-- ==== ABOUT ==== -->
+<div id="about" name="about">
+  <div class="container">
+    <div class="row white">
+      <div class="col-md-6"> <img class="img-responsive" src="assets/img/about/about.jpg" align=""> </div>
+      <div class="col-md-6">
+        <h3>About PiCMR</h3>
+        <p>LPiCMR is pin-camera handiwork designed by Squirrel team. It is an assignment of the course "Computational Photography"(CS189) in Computer Science Department of Dartmouth College.<br/><br/>
+        This work took around 1 week.<br/>
+        First trial: Sept. 22, 2015 Indoor Test <br/>
+        Version 1:   Sept. 24, 2015 Outdoor Test  <br/>
+        Version 2:   Sept. 26, 2015 Outdoor Test &amp Improvement <br/>
+        </p>
+      </div>
+    </div>
+    <!-- row --> 
+  </div>
+</div>
+<!-- container --> 
+
+<!-- ==== CAMERA ==== -->
+<div id="services" name="services">
+  <div class="container">
+    <div class="row">
+      <h2 class="centered">Our Camera Model</h2>
+      <hr>
+      <div class="col-lg-8 col-lg-offset-2">
+        <p class="large">Welcome to our PiCMR journey!</p>
+      </div>
+      <div class="col-lg-3 callout"><img src="assets/img/model/pinholes.jpg">
+        <h3>Pinhole Sizes</h3>
+        <p>PiCMR uses a narrow card with 4 different holes on it(diameters: 0.1mm, 0.5mm, 1mm, 1.5mm), which helps us easily choose the preferred size to take photos. </p>
+      </div>
+      <div class="col-lg-3 callout"><img src="assets/img/model/model1.jpg">
+        <h3>Version 1</h3>
+        <p>The first version of PiCMR used a cell phone to record the generated image. </p>
+      </div>
+      <div class="col-lg-3 callout"><img src="assets/img/model/model2.jpg">
+        <h3>Version 2</h3>
+        <p>Version 2 improves the recording effect using a Sony Nex5. Besides, the box is wrapped with aluminum foil to make it light proof.</p>
+      </div> 
+      <div class="col-lg-3 callout"><img src="assets/img/model/members.jpg">
+        <h3>Work-site</h3>
+        <p>A picture taken by a friend. Working in a ground-level room in Sudicoff.</p>
+      </div>     
+    </div>
+    <!-- row --> 
+    <div class="row controw">
+      <h2 class="centered">First Trial</h2>
+      <hr>
+      <div class="col-lg-8 col-lg-offset-2">
+        <p class="large">We firstly thought to use my Nex5 to capture the results, yet found my 30mm prime lens could not focus on the inside screen of the box. The depths of box is too small. We had to use a cellphone to perform our first test.</p>
+      </div>
+      <div class="col-lg-4 callout"><img src="assets/img/model/ver0_1.jpg">
+        <h3>Inside Faces</h3>
+        <p>One inside face of the cardbox is coverred with white paper to serve as the screen; the rest of the faces with black paper to minimize interreflections. </p>
+      </div>
+      <div class="col-lg-4 callout"><img src="assets/img/model/ver0_2.jpg">
+        <h3>Holes Cutting</h3>
+        <p>Cut a hole on the box and cover it with card paper, and punch the pinholes of varying sizes into the card paper. Next to the hole for the card paper, cut a hole for the digital camera's aperture. </p>
+      </div>
+      <div class="col-lg-4 callout"><img src="assets/img/model/ver0_3.jpg">
+        <h3>Indoor Test</h3>
+        <p>Test it to see if it can work in front of a lamp in lab. The shadows over the lamp are two of my fingers.  </p>
+      </div> 
+    </div>
+    <!-- row --> 
+    <div class="row controw">
+      <h2 class="centered">Results by Version 1</h2>
+      <hr>
+      <div class="col-lg-8 col-lg-offset-2">
+        <p class="large">Having seen the image in the first test, we believed it could work and wet on to take more pictures. We put a set of brackets on the box to hold the cell phone. However, the performance was not so good as we had thought. The picture was dark if we used the original camera software in the phone, while third-party apps also disappoined us with their strange outcomes.</p>
+      </div>
+      <div class="col-lg-4 callout"><img src="assets/img/model/ver1_1.jpg">
+        <h3>Sample 1 (1mm, 10s)</h3>
+        <p>Because the cell phone itself at most allowed us to set the shutter to 10s, the picture seemed dark, even we used the highest ISO. </p>
+      </div>
+      <div class="col-lg-4 callout"><img src="assets/img/model/ver1_2.jpg">
+        <h3>Sample 2 (1.5mm, 10s)</h3>
+        <p>Even we use the 1.5mm pinhole, the image was still dark. We noticed that 10s was not enough to get a clear picture.</p>
+      </div>
+      <div class="col-lg-4 callout"><img src="assets/img/model/ver1_3.jpg">
+        <h3> Sample 3 (1mm, 30s)</h3>
+        <p>We adjust the shutter speed to 30s using a third-party app. The result was strange. We believed it should not be so vague since the Sample 1 was clear although without enough explosure. </p>
+      </div> 
+    </div>
+    <!-- row --> 
+    <div class="row controw">
+      <h2 class="centered">Modifications in Version 2</h2>
+      <hr>
+      <div class="col-lg-8 col-lg-offset-2">
+        <p class="large">Knowing a cell phone can not satisfy us, we decided to use a digital lens camera. We replaced the 30mm lens with a 19mm one and it could perfectly focus on the image. We cut a bigger round circle on the box to let the lens in, and did some tests and modifications to improve its performence. <br/>
+        Here lists some failures in the process. The final results will be shown in nect section. </p>
+      </div>
+      <div class="col-lg-4 callout"><img src="assets/img/model/ver2_1.jpg">
+        <h3>Light Leakage</h3>
+        <p>We found a severe light leakage problem. Obviously the lights came in though the connections of the lens and box. </p>
+      </div>
+      <div class="col-lg-4 callout"><img src="assets/img/model/ver2_2.jpg">
+        <h3>Red Spot Effect</h3>
+        <p>To make it light proof, we covered the box with aluminum foil. The light leakage was alleviated, while the red light, which has the longest wave length, still snuck into the box. </p>
+      </div>
+      <div class="col-lg-4 callout"><img src="assets/img/model/ver2_3.jpg">
+        <h3>Foil Shelter</h3>
+        <p>We thus insert more aluminum foil into the connection part. The result was exciting! Unfortunately, some foil blocked the lights which were supposed to reach the screen.  </p>
+      </div> 
+    </div>
+    <!-- row --> 
+    <div class="row controw">
+      <h2 class="centered">Final Results ↓↓↓</h2>
+    </div>
+    <!-- row --> 
+  </div>
+</div>
+<!-- container --> 
+
+<!-- ==== PORTFOLIO ==== -->
+<div id="portfolio" name="portfolio">
+  <div class="container">
+    <div class="row">
+      <h2 class="centered">Best Size(1mm) Showcase</h2>
+      <hr>
+      <div class="col-lg-8 col-lg-offset-2 centered">
+        <p class="large">These pictures are taken with the best size pinhole of PiCMR. <br> Specifications:  
+               1mm pinhole diameter      30 seconds shutter speed.  <br>  Camera:   Sony NEX-5 E 19mm F2.8  ISO 1600 </p>  
+      </div>
+    </div>
+    <!-- /row -->
+    <div class="container">
+      <div class="row"> 
+        
+        <!-- PORTFOLIO IMAGE 1 -->
+        <div class="col-md-4 ">
+          <div class="grid mask">
+            <figure> <img class="img-responsive" src="assets/img/portfolio/b1 copy.jpg" alt="">
+              <figcaption>
+                <h5>Pinhole D = 1mm</h5>
+                <a data-toggle="modal" href="#myModal" class="btn btn-default">More Details</a> </figcaption>
+              <!-- /figcaption --> 
+            </figure>
+            <!-- /figure --> 
+          </div>
+          <!-- /grid-mask --> 
+        </div>
+        
+        
+        <!-- MODAL SHOW THE PORTFOLIO IMAGE. In this demo, all links point to this modal. You should create
+                  a modal for each of your projects. -->
+        
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Church of Christ at Dartmouth College</h4>
+              </div>
+              <div class="modal-body">
+                <p><img class="img-responsive" src="assets/img/portfolio/b1.jpg" alt=""></p>
+                <p> This picture was taken on a sunny day on the meadow in front of the Church of Christ at Dartmouth College. The picutre restored a balmy afternoon with a clear blue sky.</p>
+               </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+            <!-- /.modal-content --> 
+          </div>
+          <!-- /.modal-dialog --> 
+        </div>
+        <!-- /.modal --> 
+        
+        <!-- PORTFOLIO IMAGE 2 -->
+        <div class="col-md-4">
+          <div class="grid mask">
+            <figure> <img class="img-responsive" src="assets/img/portfolio/b2 copy.jpg" alt="">
+              <figcaption>
+                <h5>Pinhole D = 1mm</h5>
+                <a data-toggle="modal" href="#myModal1" class="btn btn-default">More Details</a> </figcaption>
+              <!-- /figcaption --> 
+            </figure>
+            <!-- /figure --> 
+          </div>
+          <!-- /grid-mask --> 
+        </div>
+
+          <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Baker Berry Library (Middle)</h4>
+              </div>
+              <div class="modal-body">
+                <p><img class="img-responsive" src="assets/img/portfolio/b2.jpg" alt=""></p>
+                <p>Our Pincmr was put on the lawn, 50 meters from the front door. With enough exposure time and right pinhole size, the Pincmr captured a beautiful scean of the library.  </p>
+
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+            <!-- /.modal-content --> 
+          </div>
+          <!-- /.modal-dialog --> 
+        </div>
+        
+        <!-- PORTFOLIO IMAGE 3 -->
+        <div class="col-md-4">
+          <div class="grid mask">
+            <figure> <img class="img-responsive" src="assets/img/portfolio/b3 copy.jpg" alt="">
+              <figcaption>
+                <h5>Pinhole D = 1mm</h5>
+                <a data-toggle="modal" href="#myModal2" class="btn btn-default">More Details</a> </figcaption>
+              <!-- /figcaption --> 
+            </figure>
+            <!-- /figure --> 
+          </div>
+          <!-- /grid-mask --> 
+        </div>
+      </div>
+      <!-- /row --> 
+
+       <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Sanborn House</h4>
+              </div>
+              <div class="modal-body">
+                <p><img class="img-responsive" src="assets/img/portfolio/b3.jpg" alt=""></p>
+                <p> Standing quietly under the mottled shadow of shade, Sanborn House provides a wonderful scean for us to test the Picmr. As the picture shows, Pincmr demonstrates an ability of capturing scenes even withuot receiving enough light. </p>
+
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+            <!-- /.modal-content --> 
+          </div>
+          <!-- /.modal-dialog --> 
+        </div>
+      
+      <!-- PORTFOLIO IMAGE 4 -->
+      <div class="row">
+        <div class="col-md-4 ">
+          <div class="grid mask">
+            <figure> <img class="img-responsive" src="assets/img/portfolio/b4 copy.jpg" alt="">
+              <figcaption>
+                <h5>Pinhole D = 1mm</h5>
+                <a data-toggle="modal" href="#myModal3" class="btn btn-default">More Details</a> </figcaption>
+              <!-- /figcaption --> 
+            </figure>
+            <!-- /figure --> 
+          </div>
+          <!-- /grid-mask --> 
+        </div>
+
+            <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Berry Baker Library (Middle Right)</h4>
+              </div>
+              <div class="modal-body">
+                <p><img class="img-responsive" src="assets/img/portfolio/b4.jpg" alt=""></p>
+                <p>This picture is also taken in front of Berry Baker. From a different angle, this picture shows a higher library due to perspective effect.</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+            <!-- /.modal-content --> 
+          </div>
+          <!-- /.modal-dialog --> 
+        </div>
+        
+        <!-- PORTFOLIO IMAGE 5 -->
+        <div class="col-md-4">
+          <div class="grid mask">
+            <figure> <img class="img-responsive" src="assets/img/portfolio/b5 copy.jpg" alt="">
+              <figcaption>
+                <h5>Pinhole D = 1mm</h5>
+                <a data-toggle="modal" href="#myModal4" class="btn btn-default">More Details</a> </figcaption>
+              <!-- /figcaption --> 
+            </figure>
+            <!-- /figure --> 
+          </div>
+          <!-- /grid-mask --> 
+        </div>
+        
+            <div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">We are a team</h4>
+              </div>
+              <div class="modal-body">
+                <p><img class="img-responsive" src="assets/img/portfolio/b5.jpg" alt=""></p>
+                <p>Hard to find the pinhole stranding in front of the Pinhole camera. We spend a lot of time for this photo. While not satisfying enough, it presents Pincrm's not-too-bad performance on a group photo.  </p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+            <!-- /.modal-content --> 
+          </div>
+          <!-- /.modal-dialog --> 
+        </div>
+
+
+        <!-- PORTFOLIO IMAGE 6 -->
+        <div class="col-md-4">
+          <div class="grid mask">
+            <figure> <img class="img-responsive" src="assets/img/portfolio/b6 copy.jpg" alt="">
+              <figcaption>
+                <h5>Pinhole D = 1mm</h5>
+                <a data-toggle="modal" href="#myModal5" class="btn btn-default">More Details</a> </figcaption>
+              <!-- /figcaption --> 
+            </figure>
+            <!-- /figure --> 
+          </div>
+          <!-- /grid-mask --> 
+        </div>
+        <!-- /col --> 
+      </div>
+      <!-- /row --> 
+
+   
+
+            <div class="modal fade" id="myModal5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">From Sudikoff</h4>
+              </div>
+              <div class="modal-body">
+                <p><img class="img-responsive" src="assets/img/portfolio/b6.jpg" alt=""></p>
+                <p> This is how it looks like from the entering step of Sudikoff. We use this photo for iterating our pinhole camera design merely because the place is not far from the lab. After getting this picture, we knew the camera was set well and was ready for more shots.  </p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+            <!-- /.modal-content --> 
+          </div>
+          <!-- /.modal-dialog --> 
+        </div>
+
+    <div class="row">
+      <h2 class="centered">Other Sizes(0.1/0.5/1.5 mm) Showcase</h2>
+      <hr>
+      <div class="col-lg-8 col-lg-offset-2 centered">
+        <p class="large">These pictures are taken with PiCMR of other three pinhole sizes. <br> Specifications:  
+               0.1/0.5/1.5 mm (column 1/ column 2/ column 3) pinhole diameter     30 seconds shutter speed.  <br>  Camera:   Sony NEX-5 E 19mm F2.8  ISO 1600 </p>  
+      </div>
+    </div>
+
+            <!-- PORTFOLIO IMAGE 7 -->
+      <div class="row">
+        <div class="col-md-4 ">
+          <div class="grid mask">
+            <figure> <img class="img-responsive" src="assets/img/portfolio/p7 copy.jpg" alt="">
+              <figcaption>
+                <h5>Pinhole D = 0.1mm</h5>
+                <a data-toggle="modal" href="#myModal6" class="btn btn-default">More Details</a> </figcaption>
+              <!-- /figcaption --> 
+            </figure>
+            <!-- /figure --> 
+          </div>
+          <!-- /grid-mask --> 
+        </div>
+
+                    <div class="modal fade" id="myModal6" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Church of Christ at Dartmouth College(0.1 mm pinhole) </h4>
+              </div>
+              <div class="modal-body">
+                <p><img class="img-responsive" src="assets/img/portfolio/p7.jpg" alt=""></p>
+                <p>The 0.1mm pinhole receives too little light for a desirable photo.</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+            <!-- /.modal-content --> 
+          </div>
+          <!-- /.modal-dialog --> 
+        </div>
+
+        
+        <!-- PORTFOLIO IMAGE 8 -->
+        <div class="col-md-4">
+          <div class="grid mask">
+            <figure> <img class="img-responsive" src="assets/img/portfolio/p8 copy.jpg" alt="">
+              <figcaption>
+                <h5>Pinhole D = 0.5mm</h5>
+                <a data-toggle="modal" href="#myModal7" class="btn btn-default">More Details</a> </figcaption>
+              <!-- /figcaption --> 
+            </figure>
+            <!-- /figure --> 
+          </div>
+          <!-- /grid-mask --> 
+        </div>
+
+                          <div class="modal fade" id="myModal7" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Church of Christ at Dartmouth College(0.5 mm pinhole)</h4>
+              </div>
+              <div class="modal-body">
+                <p><img class="img-responsive" src="assets/img/portfolio/p8.jpg" alt=""></p>
+                <p>In theory, the 0.5mm pinhole should be the optimal for our Pincmr. In reality, the amout of light is not sufficient even for 30 seconds exposure.  </p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+            <!-- /.modal-content --> 
+          </div>
+          <!-- /.modal-dialog --> 
+        </div>
+        
+        <!-- PORTFOLIO IMAGE 9 -->
+        <div class="col-md-4">
+          <div class="grid mask">
+            <figure> <img class="img-responsive" src="assets/img/portfolio/p9 copy.jpg" alt="">
+              <figcaption>
+                <h5>Pinhole D = 1.5mm</h5>
+                <a data-toggle="modal" href="#myModal8" class="btn btn-default">More Details</a> </figcaption>
+              <!-- /figcaption --> 
+            </figure>
+            <!-- /figure --> 
+          </div>
+          <!-- /grid-mask --> 
+        </div>
+        <!-- /col --> 
+
+                          <div class="modal fade" id="myModal8" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Church of Christ at Dartmouth College(0.5 mm pinhole)</h4>
+              </div>
+              <div class="modal-body">
+                <p><img class="img-responsive" src="assets/img/portfolio/p9.jpg" alt=""></p>
+                <p> With 0.5mm pinhole, it looks overexposed due to too much incoming light. Clearly, it's undesirable due to the loss of some details.  </p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+            <!-- /.modal-content --> 
+          </div>
+          <!-- /.modal-dialog --> 
+        </div>
+
+     <!-- PORTFOLIO IMAGE 10 -->
+        <div class="col-md-4">
+          <div class="grid mask">
+            <figure> <img class="img-responsive" src="assets/img/portfolio/p10 copy.jpg" alt="">
+              <figcaption>
+                <h5>Pinhole D = 0.1mm</h5>
+                <a data-toggle="modal" href="#myModal9" class="btn btn-default">More Details</a> </figcaption>
+              <!-- /figcaption --> 
+            </figure>
+            <!-- /figure --> 
+          </div>
+          <!-- /grid-mask --> 
+        </div>
+        <!-- /col --> 
+
+
+                          <div class="modal fade" id="myModal9" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Baker Berry(0.1 mm pinhole)</h4>
+              </div>
+              <div class="modal-body">
+                <p><img class="img-responsive" src="assets/img/portfolio/p10.jpg" alt=""></p>
+                <p>Also, the 0.1mm pinhole don't allow too much light.</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+            <!-- /.modal-content --> 
+          </div>
+          <!-- /.modal-dialog --> 
+        </div>
+
+
+
+    <!-- PORTFOLIO IMAGE 11 -->
+        <div class="col-md-4">
+          <div class="grid mask">
+            <figure> <img class="img-responsive" src="assets/img/portfolio/p11 copy.jpg" alt="">
+              <figcaption>
+                <h5>Pinhole D = 0.5mm</h5>
+                <a data-toggle="modal" href="#myModal10" class="btn btn-default">More Details</a> </figcaption>
+              <!-- /figcaption --> 
+            </figure>
+            <!-- /figure --> 
+          </div>
+          <!-- /grid-mask --> 
+        </div>
+        <!-- /col --> 
+
+                   <div class="modal fade" id="myModal10" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Baker Berry(0.5 mm pinhole)</h4>
+              </div>
+              <div class="modal-body">
+                <p><img class="img-responsive" src="assets/img/portfolio/p11.jpg" alt=""></p>
+                <p> It is sharp but underexposed. </p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+            <!-- /.modal-content --> 
+          </div>
+          <!-- /.modal-dialog --> 
+        </div>
+
+    <!-- PORTFOLIO IMAGE 12 -->
+        <div class="col-md-4">
+          <div class="grid mask">
+            <figure> <img class="img-responsive" src="assets/img/portfolio/p12 copy.jpg" alt="">
+              <figcaption>
+                <h5>Pinhole D = 1.5mm </h5>
+                <a data-toggle="modal" href="#myModal11" class="btn btn-default">More Details</a> </figcaption>
+              <!-- /figcaption --> 
+            </figure>
+            <!-- /figure --> 
+          </div>
+          <!-- /grid-mask --> 
+        </div>
+        <!-- /col --> 
+
+                   <div class="modal fade" id="myModal11" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Baker Berry(1.5 mm pinhole)</h4>
+              </div>
+              <div class="modal-body">
+                <p><img class="img-responsive" src="assets/img/portfolio/p12.jpg" alt=""></p>
+                <p> Overexposed. The tower is too bright.</p>
+
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+            <!-- /.modal-content --> 
+          </div>
+          <!-- /.modal-dialog --> 
+        </div>
+
+      </div>
+      <!-- /row --> 
+    </div>
+    <!-- /row --> 
+  </div>
+</div>
+<!-- /container --> 
+
+<!-- ==== TEAM MEMBERS ==== -->
+<div id="team" name="team">
+  <div class="container">
+    <div class="row centered">
+      <h2 class="centered">About Squirrel</h2>
+      <hr>
+        <div class="col-lg-3 left"> 
+        </div>
+
+      <div class="col-lg-3 centered"> <img class="img img-circle" src="assets/img/team/weichen2.jpg" height="140px" width="140px" alt="">
+        <h4>Weichen Wang</h4>
+        <p>First year MS student in Dartmouth. Having studied and worked in Japan for 5 years. Aiming to be a researcher in Computer Science.</p>
+        <a href="https://www.facebook.com/wangweichen.cn"><i class="fa fa-facebook"></i></a> 
+        <a href="https://www.linkedin.com/pub/wang-weichen/55/230/122"><i class="fa fa-linkedin"></i></a> </div>
+
+      <div class="col-lg-3 centered"> <img class="img img-circle" src="assets/img/team/allen2.png" height="140px" width="140px" alt="">
+        <h4>Chimian Wu</h4>
+        <p>First year master student in Dartmouth College. Obsessed with details. Working on being a cool and insightful life hacker. </p>
+        </i></a> <a href="https://www.facebook.com/allenwowow"><i class="fa fa-facebook"></i></a> 
+        <a href="https://www.linkedin.com/nhome/?trk="><i class="fa fa-linkedin"></i></a> </div>
+
+
+      <div class="col-lg-8 col-lg-offset-2 centered">
+        <p class="large">Squirrel is formed by two exacting young man craving for knowing everything of pictures and photography.</p>
+      </div>
+    </div>
+  </div>
+  <!-- row --> 
+</div>
+<!-- container --> 
+
+  
+
+<!-- Bootstrap core JavaScript
+    ================================================== --> 
+<!-- Placed at the end of the document so the pages load faster --> 
+
+<script type="text/javascript" src="assets/js/bootstrap.min.js"></script> 
+<script type="text/javascript" src="assets/js/retina.js"></script> 
+<script type="text/javascript" src="assets/js/jquery.easing.1.3.js"></script> 
+<script type="text/javascript" src="assets/js/smoothscroll.js"></script> 
+<script type="text/javascript" src="assets/js/jquery-func.js"></script>
+</body>
+</html>
